@@ -7,13 +7,13 @@ Throughout the literature, a variety of different definitions of data life cycle
 The first model to be analysed is the model proposed by Data Documentation Initiative (DDI). The DDI introduced a Combined Life Cycle Model for data managing \cite{data_documentation_initiative_overview_2008}. As Figure \ref{fig:ddi} shows, this model has eight elements or steps which can be summarized as follows, according to \cite{ball_review_2012}:
 
 \begin{itemize}
-    \item \textbf{Study Concept.} At this stage, apart from choosing the research question and the methodology for collecting the data, also plans the processing and analysis of data to answer the question.
-    \item \textbf{Data Collection.} This model proposes different methods to collect data, like surveys, health records, statistics or Web-based collections.
-    \item \textbf{Data Processing.} At this stage, the collected data is processed to answer the proposed research question. The data may be recorded both machine-readable and human-readable form.
-    \item \textbf{Data Archiving.} Both data and metadata should be archived to ensure long-term access to them, ensuring the confidentiality.
-    \item \textbf{Data Distribution.} This stage involves the different ways which the data are distributed and questions related to terms of use of the data or citation of the original sources. 
-    \item \textbf{Data Discovery.} The data may be published in different manners, through publications, web-indexes, etc.
-    \item \textbf{Data Analysis.} The data can be used by others to achieve different goals.
+    \item \textbf{Study concept.} At this stage, apart from choosing the research question and the methodology for collecting the data, also plans the processing and analysis of data to answer the question.
+    \item \textbf{Data collection.} This model proposes different methods to collect data, like surveys, health records, statistics or Web-based collections.
+    \item \textbf{Data processing.} At this stage, the collected data is processed to answer the proposed research question. The data may be recorded both machine-readable and human-readable form.
+    \item \textbf{Data archiving.} Both data and metadata should be archived to ensure long-term access to them, ensuring the confidentiality.
+    \item \textbf{Data distribution.} This stage involves the different ways which the data are distributed and questions related to terms of use of the data or citation of the original sources. 
+    \item \textbf{Data discovery.} The data may be published in different manners, through publications, web-indexes, etc.
+    \item \textbf{Data analysis.} The data can be used by others to achieve different goals.
     \item \textbf{Repurposing.} The data can be used outside of their original framework, restructuring them or combining with different data.
 \end{itemize}
 
@@ -83,3 +83,41 @@ The last analyzed data life cycle model, is the one proposed by UK Data Archive\
 \end{figure}
 
 \subsection{A common data life cycle for smart cities}
+
+Based on these data life cycle models, we proposed a common data life cycle for managing data into smart cities. As can be seen at Figure \ref{fig:model}, the different stages of mentioned models have been aggregated, forming our proposed model.
+%\begin{table}
+%    \centering
+%    \begin{tabular}{|l|l|l|l|l|}
+%        \hline
+%        \textbf{DDI} & \textbf{ANDS} & \textbf{Ecoinformatics} & \textbf{UK Data Archive} & \\
+%        \hline \hline
+%        \rowcolor [gray]{.9} Study  concept & Create & Plan & Create & \\
+%        \cellcolor [gray]{.9} Collect & \cellcolor [gray]{.8} Store & \cellcolor [gray]{.9} Collect & Process & \\
+%        Process & Describe & Assure & Analyze & \\
+%        Archive & Identify & Describe & Preserve & \\
+%        Distribute & Register & Preserve & Access & \\
+%        Discovery & Discover & Discover & Re-use & \\
+%        Analysis & Access & Integrate & &  \\
+%        Repurposing & Exploit & Analyze & & \\
+%        \hline
+%   \end{tabular}
+%\end{table}
+
+\begin{figure}
+    \center
+    \includegraphics[width=\linewidth]{img/data_lifecycle/model.pdf}
+    \caption{Proposed model.}
+    \label{fig:model}
+\end{figure}
+
+The different stages of this model, which are going to be explained widely in following sections, are:
+\begin{itemize}
+    \item \textbf{Capture.} The first step of our model consists on capturing the data. In a smart city there are a lot of alternatives to capture data, like sensors, data published by public administration, social networks or in more traditional way like surveys.
+    \item \textbf{Process.} Once the required data is captured, they are prepared to store, allowing proper methods to explore them. This processing involves the refining, cleaning, formatting and transformation of the data.
+    \item \textbf{Store.} The storage of data is, probably, the most delicate action in the life cycle. Above the storage are build all the analysis tools and is the ``final endpoint'' when someone requests our data. A suitable storage should have indexing, replication, distribution and backup capabilities, among other things.
+    \item \textbf{Publish.} Most of mentioned models 
+    \item \textbf{Analyze.}
+    \item \textbf{Visualize.}
+    \item \textbf{Discovery.}
+\end{itemize}
+
