@@ -77,7 +77,7 @@ The last analyzed data life cycle model, is the one proposed by UK Data Archive\
 
 \begin{figure}
     \center
-    \includegraphics[scale=0.4]{img/data_lifecycle/uk-data-archive.png}
+    \includegraphics[scale=0.3]{img/data_lifecycle/uk-data-archive.png}
     \caption{Data life cycle proposed by UK Data Archive.}
     \label{fig:uk-data-archive}
 \end{figure}
@@ -105,7 +105,7 @@ Based on these data life cycle models, we proposed a common data life cycle for 
 
 \begin{figure}
     \center
-    \includegraphics[width=\linewidth]{img/data_lifecycle/model.pdf}
+    \includegraphics[width=0.88\linewidth]{img/data_lifecycle/model.pdf}
     \caption{Proposed model.}
     \label{fig:model}
 \end{figure}
@@ -113,11 +113,11 @@ Based on these data life cycle models, we proposed a common data life cycle for 
 The different stages of this model, which are going to be explained widely in following sections, are:
 \begin{itemize}
     \item \textbf{Capture.} The first step of our model consists on capturing the data. In a smart city there are a lot of alternatives to capture data, like sensors, data published by public administration, social networks or in more traditional way like surveys.
-    \item \textbf{Process.} Once the required data is captured, they are prepared to store, allowing proper methods to explore them. This processing involves the refining, cleaning, formatting and transformation of the data.
+    \item \textbf{Process.} Once the required data is captured, they are prepared to store, allowing proper methods to explore them. This processing involves the analyzing, refining, cleaning, formatting and transformation of the data. A this stage we also suggest to search links and relationships with other data.
     \item \textbf{Store.} The storage of data is, probably, the most delicate action in the life cycle. Above the storage are build all the analysis tools and is the ``final endpoint'' when someone requests our data. A suitable storage should have indexing, replication, distribution and backup capabilities, among other things.
-    \item \textbf{Publish.} Most of mentioned models 
-    \item \textbf{Analyze.}
-    \item \textbf{Visualize.}
-    \item \textbf{Discovery.}
+    \item \textbf{Publish.} Most of previously mentioned models prioritize the analyzing stage over the publication stage. In our model, we propose the opposite for a very simple reason: when you consume your data before the publication of them, and through different way which the rest of the people is going to consume them, you do not emphasize enough on publishing these data correctly. Everybody has ever met a research paper or an application in which accessing the data was difficult, or, once we have the data, these data are incomprehensible. To avoid this issue, we propose to publish the data before consuming them, and consume them through the same way as the rest of the people does.
+    \item \textbf{Consume.} Once the data is published, we use the provided methods to consume the data. This data consumption involves the data mining, analytics or reasoning.
+    \item \textbf{Visualize.} To understand the data properly, doing suitable visualizations is essential to show correlation between data or the conclusions of the data analysis in a human-readable way.
+    \item \textbf{Discovery.} This step is about discovering data from external sources, or about our data being discovered by others. This step enables a new execution of the entire life cycle, avoiding the capturing stage, since we are using third parties data. Otherwise, the data life of different datasets can elapse concurrently, being merged at processing stage.
 \end{itemize}
 
