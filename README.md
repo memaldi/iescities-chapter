@@ -1,17 +1,21 @@
-﻿## GUIDELINES FOR CHAPTER PREPARATION
+﻿## Guidelines for chapter preparation
 
 __Springer series:__ Modeling and Optimization in Science & Technology
 
 __Series Editor:__ Prof. Srikanta Patnaik
 
 
-> __TITLE:__ "MODELLING AND PROCEESING FOR NEXT GENERATION BIG DATA TECHNOLOGIES AND APPLICATIONS VOLUME EDITORS"
+> __Title:__ "Modelling and proccessing for next generation big data technologies and applications"
 
-FATOS XHAFA (corresponding editor) TECHNICAL UNIVERSITY OF CATALONIA, SPAIN
-PETRAQ PAPAJORGJI, ADMIR BAROLLI, CANADIAN INSTITUTE OF TECH, ALBANIA
-LEONARD BAROLLI FUKUOKA INSTITUTE OF TECHNOLOGY, JAPAN
+#### Volume editors
 
-### BOOK STRUCTURE
+* __Fatos Xhafa (corresponding editor):__ Technical University of Catalonia, Spain
+* __Petraq Papajorgji & Admir Barolli:__ Canadian Institute of Tech, Albania
+* __Leonard Barolli:__ Fukuoka Institute of Technology, Japan
+
+***
+
+### Book structure
 
 Authors are suugested to follow the structure below, for coherence matters, although slight changes in this structure can be done:
 
@@ -29,37 +33,48 @@ Authors are suugested to follow the structure below, for coherence matters, alth
 12. Index of terms
 13. Acronyms/glosssary of terms
 
-### CHAPTER BOOK LENGTH
+***
+
+### Chapter book length
 
 Chapters can have between between 20 and 35 pages long. If authors need more space, please contact book editors.
 
-### CHAPTER BOOK FORMATTING STYLE
+***
+
+### Chapter book formatting style
 
 Please use the formatting rules (from editors—document attached) and templates from Springer (attached). Both word and Latex templates are available, the use of LaTex is preferable.
 
 __Edited Book:__ 26th March 2013
 
-### CHAPTER BOOK DELIVERIES
+***
 
-#### 1ST DELIVERY
-* April 20th (on or before): Invitation to prospective authors Prospective authors will be invited to send to corresponding guest editor a two page submission with title, authors, abstract and objectives of the chapter proposal. The authors should briefly justify their propspective contribution in the book scope.
-* May 15th: notification (the authors will be notified about the suitability of their chapter proposal for inclusión in the book).
+### Chapter book deliveries
 
-#### 2ND DELIVERY
-* September 15th (on or before): Chapter submissions (pdf file only)
-* November 15th: Notification of review and feedback to authors
+#### 1st delivery
+* __April 20th (on or before):__ Invitation to prospective authors Prospective authors will be invited to send to corresponding guest editor a two page submission with title, authors, abstract and objectives of the chapter proposal. The authors should briefly justify their propspective contribution in the book scope.
+* __May 15th:__ notification (the authors will be notified about the suitability of their chapter proposal for inclusión in the book).
 
-#### 3RD DELIVERY
-* December 15th (on or before): Submission of revised chapters
-* December 30th: Final notification.
+#### 2nd delivery
+* __September 15th (on or before):__ Chapter submissions (pdf file only)
+* __November 15th:__ Notification of review and feedback to authors
 
-#### FINAL DELIVERY
-* January 15th: Chapter sources and consent to publish from authors
+***
 
-#### BOOK PUBLICATION
-Book publication: Early 2014
+#### 3rd delivery
+* __December 15th (on or before):__ Submission of revised chapters
+* __December 30th:__ Final notification.
 
-### BOOK SCOPE
+#### Final delivery
+* __January 15th:__ Chapter sources and consent to publish from authors
+
+
+#### Book publication
+__Book publication:__ Early 2014
+
+***
+
+### Book scope
 
 We are witnessing an exponential growth in data sets, coined as Big Data era. The data being generated in large Internet-based IT systems is becoming a corner-stone for enterprises, businesses, academia and all human activity fields.
 
@@ -88,8 +103,12 @@ Topics of interest include:
 * Applications: Enterprise analytics, collaboration, event-based systems, context-aware systems, sensor networks, smart cities and environments, Energy-ware Data Centers, e-Infrastructures, social networking
 * Best practices from research projects, enterprises, open data projects and infrastructures.
 
-__Contact__
+***
+
+### Contact
 
 Inquiries should be addressed to:
 
-FATOS XHAFA (corresponding editor), TECHNICAL UNIVERSITY OF CATALONIA, SPAIN fatos.xhafa@gmail.com / fatos@lsi.upc.edu
+__Fatos Xhafa (corresponding editor):__ Technical University of Catalonia, Spain
+
+fatos.xhafa@gmail.com / fatos@lsi.upc.edu
