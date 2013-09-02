@@ -82,14 +82,14 @@ There is data being generated everywhere: IT systems, biology, genomics, financi
 
 Researchers and developers are facing challenges in dealing with this data deluge. Novel modelling, algorithms, software solutions and methodologies to cover full data cycle (from data gathering to visualization and interaction) are in need for investigation. Challenges arise due to the extremely large volumes of data, their heterogenous nature (structured & unstructured) and the pace at which data is generated requiring both offline and online processing of large streams of data. Obviously, most traditional database solutions may not be able to cope with such challenges and non-traditional database and storage solutions are imperative today.
 
-This Springer book volume seeks contributions on new models and analytic tools for the modelling of large data sets, efficient data processing (online/offline), algorithms and analysis (mining, etc.) to enable next generation data aware systems offering quality content and innovative services in a reliable and scalable way. The book welcomes surveys critically analyzing the state of the art and envisioning the road ahead on next generatation big data technologies. Optimization models and their efficient resolution as well as performance evaluation and simulation are also interesting in the scope of the book. Finally, applications, case studies and best practices are encouraged for submission to the book.
+This Springer book volume seeks contributions on new models and analytic tools for the modelling of large data sets, efficient data processing (online/offline), algorithms and analysis (mining, etc.) to enable next generation data aware systems offering quality content and innovative services in a reliable and scalable way. The book welcomes surveys critically analyzing the state of the art and envisioning the road ahead on next generation big data technologies. Optimization models and their efficient resolution as well as performance evaluation and simulation are also interesting in the scope of the book. Finally, applications, case studies and best practices are encouraged for submission to the book.
 
 __Topics__
 
 Topics of interest include:
 
 * New models for big data sets and their management
-* Modelling full data life cycle: date capture, storage, processing, delivery, exploitation, visualization and interaction.
+* __Modelling full data life cycle: date capture, storage, processing, delivery, exploitation, visualization and interaction.__
 * Modelling data flows to support intelligent processing and sharing
 * Advanced query models for big data
 * Processing of big data sets (HPC, XML, Mining,...)
@@ -100,8 +100,8 @@ Topics of interest include:
 * Cost, economic and optimization models for big data and big data *ets
 * Data software components and data re-use
 * Technologies: Cloud computing systems, Data storage systems, Hadoop, Yahoo!S4, Twitter Storm
-* Applications: Enterprise analytics, collaboration, event-based systems, context-aware systems, sensor networks, smart cities and environments, Energy-ware Data Centers, e-Infrastructures, social networking
-* Best practices from research projects, enterprises, open data projects and infrastructures.
+* Applications: Enterprise analytics, collaboration, event-based systems, context-aware systems, sensor networks, __smart cities and environments__, Energy-ware Data Centers, e-Infrastructures, social networking
+* __Best practices from research projects, enterprises, open data projects and infrastructures.__
 
 ***
 
