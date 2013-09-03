@@ -65,7 +65,7 @@ Michener and Jones define in \cite{michener_ecoinformatics:_2012} the concept of
 
 \subsection{UK Data Archive}
 
-The last analyzed data life cycle model is the one proposed by \textit{UK Data Archive}\footnote{\url{http://www.data-archive.ac.uk/create-manage/life-cycle}}. This model is oriented to help researchers publish their data in a manner that allows other researchers to continue their work independently. In Figure \ref{fig:uk-data-archive}, the following stages can be observed:
+Another data life cycle model is the one proposed by \textit{UK Data Archive}\footnote{\url{http://www.data-archive.ac.uk/create-manage/life-cycle}}. This model is oriented to help researchers publish their data in a manner that allows other researchers to continue their work independently. In Figure \ref{fig:uk-data-archive}, the following stages can be observed:
 \begin{itemize}
     \item \textbf{Creating data.} Creating the data involves the design of the research question, planning how data are going to be managed and their sharing strategy. If we want to reuse existing data, we have to locate existing data and collect them. Whether data is new or existing, at this stage the metadata has to be created.
     \item \textbf{Processing data.} Like in other models, at this stage the data is translated, checked, validated and cleaned. In the case of confidential data, data needs to be ``anonymized''. The UK Data Archive recommends the creation of metadata at this stage too.
@@ -81,6 +81,33 @@ The last analyzed data life cycle model is the one proposed by \textit{UK Data A
     \caption{Data life cycle proposed by UK Data Archive.}
     \label{fig:uk-data-archive}
 \end{figure}
+
+\subsection{The LOD2 Stack Data Life Cycle}
+
+The last analyzed data life cycle has been developed under the LOD2\footnote{\url{http://lod2.eu/}} project. This project proposes a technological and methodological stack which supports the entire life cycle of Linked Data \cite{auer_managing_2012}. As Figure \ref{fig:lod2} shows, the proposed life cycle phases are the following:
+
+\begin{figure}
+    \center
+    \includegraphics[scale=0.6]{img/data_lifecycle/lod2lifecyle1.png}
+    \caption{Linked Data life cycle from LOD2 stack.}
+    \label{fig:lod2}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Storage.} As RDF data presents more challenges than relational data, they propose the collaboration between known and new technologies, like columnstore technology, dynamic query optimization, adaptive caching of joins, optimized graph processing and cluster/cloud scalability.
+
+    \item \textbf{Authoring.} LOD2 provides provenance about data collected through distributed social, semantic collaboration and networking techniques.
+
+    \item \textbf{Interlinking.} At this phase, LOD2 offers approaches to manage the links between different data sources.
+
+    \item \textbf{Classification.} This stage deals with the transformation of raw data into Linked Data. This transformation implies the linkage and integration of data with upper level ontologies.
+
+    \item \textbf{Quality.} Like other models, LOD2 develops techniques for assesing quality based on different metrics.
+
+    \item \textbf{Evolution/Repair.} At this stage, LOD2 deals with the dynamism of the data from the Web, managing changes and modifications over the data.
+
+    \item \textbf{Search/Browsing/Exploration.} This stage is focused on offering Linked Data to final users through different search, browsing, exploration and visualization techniques.
+\end{itemize}
 
 \subsection{A common data life cycle for smart cities}
 
@@ -105,7 +132,7 @@ Based on these data life cycle models, we proposed a common data life cycle for 
 
 \begin{figure}
     \center
-    \includegraphics[width=0.88\linewidth]{img/data_lifecycle/model.pdf}
+    \includegraphics[width=0.60\linewidth]{img/data_lifecycle/model.pdf}
     \caption{Proposed model.}
     \label{fig:model}
 \end{figure}
