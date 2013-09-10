@@ -10,14 +10,41 @@ Data are the basis of smart cities, undoubtedly: services offered to citizens, d
 
 \subsubsection{Sensor Networks.}
 
-A sensor network is composed by low-cost, low-power, small sized and multifunctional sensor nodes which are densely deployed either inside the phenomenon or very close to it \cite{akyildiz_survey_2002}. In a smart city, these sensor networks are used for a wide range of applications, from the simple analysis of air quality\footnote{\url{http://helheim.deusto.es/bizkaisense/}} to the complex representation of public transport services\footnote{\url{http://traintimes.org.uk/map/tube/}}. For example, the SmartSantander project envisions the deployment of 20,000 sensors in four European cities \cite{sanchez_smartsantander:_2011}. Nowadays due the existence of open-source and cheap hardware devices like Arduino\footnote{\url{http://www.arduino.cc/}} or Raspberry Pi\footnote{\url{http://www.raspberrypi.org/}}, the amount of collaborative and social sensor networks is growing faster and faster. Furthermore, there are software platforms like Xively\footnote{\url{https://xively.com}} or Linked Sensor Middleware \cite{le-phuoc_linked_2011}, which allow users to share the captured data from their own sensors networks in an easy way.
+A sensor network is composed by low-cost, low-power, small sized and multifunctional sensor nodes which are densely deployed either inside the phenomenon or very close to it \cite{akyildiz_survey_2002}. In a smart city, these sensor networks are used for a wide range of applications, from the simple analysis of air quality\footnote{\url{http://helheim.deusto.es/bizkaisense/}} to the complex representation of public transport services\footnote{\url{http://traintimes.org.uk/map/tube/}}, through the sensors embedded in citizens smartphones. For example, the SmartSantander project envisions the deployment of 20,000 sensors in four European cities \cite{sanchez_smartsantander:_2011}. Nowadays due the existence of open-source and cheap hardware devices like Arduino\footnote{\url{http://www.arduino.cc/}} or Raspberry Pi\footnote{\url{http://www.raspberrypi.org/}}, the amount of collaborative and social sensor networks is growing faster and faster. Furthermore, there are software platforms like Xively\footnote{\url{https://xively.com}} or Linked Sensor Middleware \cite{le-phuoc_linked_2011}, which allow users to share the captured data from their own sensors networks in an easy way.
 
 \subsubsection{Social Networks.}
 
 Since the adoption of the Web 2.0 paradigm \cite{oreilly_what_2007}, users have become more and more active when interacting with the Web. The clearest example of this transformation of the Web can be found in social networks and the high growth of their users. For example, at the end of the second quarter of 2013, Facebook has almost 1.2 billion users\footnote{\url{http://techcrunch.com/2013/07/24/facebook-growth-2/}}, while at the end of 2012, Twitter reached more than 200 million monthly active users\footnote{\url{https://twitter.com/twitter/status/281051652235087872}}. Although users of social networks generate a lot of data, it is hard to manipulate them because users write in a language not understood by machines. To solve this issue many authors have worked with different Natural Language Processing techniques. For example, NLP and Named Entity Recognition (NER) systems \cite{maynard_named_2001} can be used to detect tweets which talk about some emergency situation like a car crash, an earthquake and so on; and to recognize different properties about the emergency situation like the place or the magnitude of this situation \cite{sixto_enable_????,martins_machine_2010}. Extracting data from relevant tweets could help emergency teams when planning their response to different types of situations as can be seen at \cite{abel_twitcident:_2012,vieweg_microblogging_2010,hughes_twitter_2009}.
 
 
-\subsubsection{Government Open Data}
+\subsubsection{Government Open Data.}
+
+Government Open Data has gained a lot of value in recent years, thanks to the proliferation of Open Data portals from different administrations of the entire World. In these portals, the governments publish relevant data for the citizens, in a heterogeneous set of formats like CSV, XML or RDF. Usually, data from these portals can be consumed by developers in an easy way thanks to the provided APIs, so there are a lot of applications developed over these data. As citizens are the most important part of smart cities, these applications make them an active part in the governance of the city.
+
+To illustrate the importance of Government Open Data, in Table \ref{tab:open data portals} some Open Data portals are shown.
+
+    \begin{table}
+        \center
+        \begin{tabular}{|p{2cm}|p{3cm}|p{2.5cm}|p{2cm}|}
+            \hline
+            \textbf{Name} & \textbf{Public Administration} & \textbf{No. of datasets (Sept. 2013)} & \textbf{API} \\
+            \hline \hline
+            Data.gov & Government of USA & 97,536 & REST, SOAP, WMS\\
+            \hline
+            Data.gov.uk & Government of UK & 10,114 & REST \\
+            \hline
+            Data.gc.ca & Government of Canada & 197,805 & REST \\
+            \hline
+            Open Data Euskadi & Government of Basque Country & 2,127 & RSS, Java API, REST \\
+            \hline
+            Datos Abiertos de Zaragoza & Council of Zaragoza & 112 & SPARQL \\
+            \hline
+        \end{tabular}
+        \caption{Open Data portals around the World.}
+        \label{tab:open data portals}
+    \end{table}
+
+As have been shown, in a smart city a lot of data sources can be found, publishing an abundant stream of interesting data in a different and heterogeneous manner. In section \ref{subsec:process}, how transform these data in a standard formats is shown.
 
 \subsection{Process}
 \label{subsec:process}
