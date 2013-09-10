@@ -5,6 +5,7 @@ In the previous section, we identified some of the challenges smart cities will 
 Next we describe how Linked Open Data principles could help in the model's stages:
 
 \subsection{Capture}
+\label{sec:capture}
 
 Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen at section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed. 
 
@@ -48,6 +49,12 @@ As have been shown, in a smart city a lot of data sources can be found, publishi
 
 \subsection{Process}
 \label{subsec:process}
+
+As can be seen at section \ref{sec:introduction}, Linked Data proposed the Resource Description Framework (RDF) as the best format to publish data and the reuse of widely extended ontologies. In this section we explain \textbf{what} is an ontology, \textbf{which} are the most popular ontologies and \textbf{how} we can map previously captured raw data to a proper ontology.
+
+As defined by \cite{noy_ontology_2001}, an ontology is \textit{a formal explicit description of concepts in a domain of discourse, properties of each concept describing various features and attributes of the concept, and restrictions on slots}. According to this definition, an ontology has \textit{Classes} which represent the concept, \textit{Properties} which represent different characteristic of \textit{Classes} and \textit{Restrictions} on the values of these properties and relationships among different \textit{Classes}. An ontology allows modelling data avoiding most of ambiguities originated when fusing data from different sources, stimulating the interoperability among different sources. As we see in section \ref{sec:capture} in a smart city data came from a wide variety of sources, whereby the ontologies seem to be a suitable option to model these data.
+
+
 
 \subsection{Store}
 
