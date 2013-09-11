@@ -69,20 +69,43 @@ Another interesting tool is Virtuoso Sponger, a component of OpenLink Virtuoso\f
 Once data is mapped to a proper ontology and the RDF files are generated, is time to store them. Due the big amount of data generated in a city, an appropriate storage has to:
 
 \begin{itemize}
+    \item Support different input data formats.
     \item Manage and index big amounts of data properly.
     \item Execute queries over data in an efficient way.
     \item Offer different interfaces and APIs to users, allowing them to consume data in a wide variety of formats.
 \end{itemize}
 
-Along this section, the first two points are discussed, while third point is discussed in section \ref{sec:publish}
+Along this section, the first two points are discussed, while third point is discussed in section \ref{subsec:publish}.
+
+Before a wide description of each datastore we have analysed, a brief description is presented in Table \ref{tab:datastores}.
+
+\begin{table}
+    \center
+    \begin{tabular}{|c|p{2.8cm}|p{2.8cm}|p{2.8cm}|}
+        \hline
+        \textbf{Datastore} & \textbf{Input formats} & \textbf{API} & \textbf{Output formats} \\
+        \hline \hline
+        Virtuoso & RDF/XML, N3, Turtle, N-Triples, N-Quads, etc. & SPARQL, SPARQL UPDATE, Java (Jena, Sesame, Redland) & HTML, Spreadsheet, XML, RDF+JSON, JS, NTriples, RDF/XML, CSV \\
+        \hline
+        Stardog & NTRIPLES, RDF/XML, Turtle, TRIG, TRIX, N3, N-Quads & SPARQL (CLI, HTTP), Java, JS, Groovy, Spring, Ruby & N-Triples, RDF/XML, TURTLE, TRIG, TRIX, N3, N-Quads \\
+        \hline
+        Fuseki & RDF/XML, N-Triples, Turtle, etc. & SPARQL, SPARQL UPDATE, Java & JSON, XML, Text, CSV, TSV \\
+        \hline
+    \end{tabular}
+    \caption{Summary of characteristics of selected datastores.}
+    \label{tab:datastores}
+\end{table}
+
+The first datastore to be reviewed is Virtuoso by Openlink, mentioned in section \ref{subsec:process}. Virtuoso is a hybrid server that manages SQL, XML and RDF in a single server. It is available in both Open Source and commercial versions. As seen in Table \ref{tab:datastores}, it supports a wide variety of input and output formats. It has a SPARQL endpoint, accessible thus by web-interface as by HTTP GET requests, allowing to web-agents the access to data. Virtuoso supports the SPARQL UPDATE syntax, allowing the update of datastore through HTTP POST requests; and it provides connectors for different Java powered RDF engines, like Jena\footnote{\url{http://jena.apache.org/}}, Sesame\footnote{\url{http://www.openrdf.org/}} or Redland\footnote{\url{http://librdf.org/}}. According to the Berlin SPARQL Benchmark \cite{bizer2009berlin} Virtuoso 7 can load one billion triples in 27:11 minutes, one of things which makes Virtuoso a powerful RDF store.
 
 
 
 \subsection{Publish}
-\label{sec:publish}
+\label{subsec:publish}
 % Mikel
 
-\subsection{Discovery}\label{subsec:discovery}
+\subsection{Discovery}
+\label{subsec:discovery}
 % Oscar
 
 \subsection{Enrichment}
