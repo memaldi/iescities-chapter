@@ -73,6 +73,28 @@ Another interesting tool is Virtuoso Sponger, a component of OpenLink Virtuoso\f
 \subsection{Discovery}\label{subsec:discovery}
 % Oscar
 
+The discovery stage starts a loop on the model after the publishing step, augmenting the number of third parties resources data is taken from. Discovery can be achieved following two different paths: \textit{a)} incrementing the number of datasets from where data are taken from and \textit{b)} stablishing relationships between existing data and external datasets, in order to provide links for new information stores.
+
+The first approach is followed by \cite{pschorr2010sensor}, a semantic sensor network middleware which allows for effective discovery of sensors on the Web. This work's outcomes can be applied to sensorized smart cities, as it enables the possibility to add new sensors' data as input to the processing algorithms by location (identifying those sensors which are near-by or within a certain distance from a given place).
+
+Regarding the second approximation, different frameworks have been developed to deal with class and properties matching. The basis of these frameworks is to provide data discovery features through links to external entities related to the items used in the analysis.
+
+The \textit{Silk - Link Discovery Framework} \cite{volz2009silk} offers a flexible tool for discovering links between entities within different Web data sources. Silk makes use of \textit{Silk - Link Specification Language} (Silk-LSL), a declarative language which lets data publishers specify which RDF link types should be discovered providing two related datasets, and the conditions under data items must fulfill to be interlinked. As an example, a script in Silk-LSL can be written to match cities between \textit{DBpedia} ontology's \textit{City} or \textit{PopulatedPlace} classes, and \textit{GeoName}'s feature class \textit{gn:P}. As constraints, string similarity metrics can be used to match city names, and take into consideration cities' bounding boxes (i.e. the margins projected on a map) to check overlaps.
+
+\begin{figure}
+    \center
+    \includegraphics[width=\textwidth]{img/ld_approach/silk.png}
+    \caption{Silk framework architecture}
+\end{figure}
+
+With a similar approach \textit{LIMES} (LInk discovery framework for MEtric Spaces) \cite{ngomo2011limes} can be used for the discovery of links between Linked Data knowledge bases, focusing on a time-efficient approach especially when working with large-scale matching tasks. LIMES relies on \textit{triangle inequality} mathematical principles for distance calculations, which reduce the number of comparisons necessary to complete a mapping by several orders of magnitude. This approach helps detecting the pairs that will not fulfil the requirements in an early stage, thus avoiding spending time in more time-consuming processing.
+
+\begin{figure}
+    \center
+    \includegraphics[width=\textwidth]{img/ld_approach/limes.png}
+    \caption{LIMES framework architecture}
+\end{figure}
+
 \subsection{Enrichment}
 % Oscar
 
@@ -145,3 +167,5 @@ Visualbox\footnote{http://alangrafu.github.io/visualbox/} is a simplified editio
 \end{figure}
 
 Independently of how visualizations are generated, they provide a perfect solution to present high-quality, refined data to end-users.
+
+% Map4RDF
