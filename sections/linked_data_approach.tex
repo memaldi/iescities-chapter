@@ -135,7 +135,7 @@ One of these features can be the \texttt{303 Redirection} explained at section \
 
 \begin{figure}
     \center
-    \includegraphics[width=\textwidth]{img/ld_approach/pubby.png}
+    \includegraphics[width=0.92\textwidth]{img/ld_approach/pubby.png}
     \caption{Example of HTML visualization of a resource from Hedatuz dataset by Pubby.}
     \label{fig:pubby}
 \end{figure}
@@ -144,13 +144,12 @@ D2R Server \cite{bizer2006d2r} allows the publication of relational databases as
 
 \begin{figure}
     \center
-    \includegraphics[width=\textwidth]{img/ld_approach/d2rq.png}
+    \includegraphics[width=0.98\textwidth]{img/ld_approach/d2rq.png}
     \caption{D2RQ mapping file. Example taken from http://d2rq.org/d2rq-language.}
     \label{fig:d2rq}
 \end{figure}
 
 In the process of publishing data from smart cities as Linked Data, new ontologies are going to be created to model the particularities of each city. The creators of these ontologies have to publish a suitable documentation, allowing the proper reuse of them. A tool for publishing ontologies and their documentation is Neologism\footnote{\url{http://neologism.deri.ie/}}. Neologism shows ontologies in a human-readable manner, representing class, subclass and property relationships through diagrams.
-% Mikel
 
 \subsection{Linkage}
 
@@ -184,7 +183,7 @@ Whereas complex processing algorithms can be used independently of the dataset f
 
 As seen in sections \ref{sensor_networks} and \ref{social_networks}, sensors and social networks are common data input resources, generating huge amounts of data streamed in real time. The work done in \cite{sequeda2009linked} comprises a set of best practices to publish and link stream data to be part of the Semantic Web.
 
-However, when it comes to consume Linked Data streams, SPARQL can find its limits \cite{della2009s}. Stream-querying languages such as CQELS's\footnote{\url{https://code.google.com/p/cqels/}} language (an extension of the declarative SPARQL 1.1 language using the EBNF notation) can greatly help in the task. CQELS\cite{le2011native} (Continuous Query Evaluation over Linked Stream) is a native and adaptive query processor for unified query processing over Linked Stream Data and Linked Data developed at DERI Galway\footnote{http://www.deri.ie/}.
+However, when it comes to consume Linked Data streams, SPARQL can find its limits \cite{della2009s}. Stream-querying languages such as CQELS's\footnote{\url{https://code.google.com/p/cqels/}} language (an extension of the declarative SPARQL 1.1 language using the EBNF notation) can greatly help in the task. CQELS\cite{le2011native} (Continuous Query Evaluation over Linked Stream) is a native and adaptive query processor for unified query processing over Linked Stream Data and Linked Data developed at DERI Galway\footnote{\url{http://www.deri.ie/}}.
 
 Initially, a query pattern is added to represent window operators on RDF Stream:
 
@@ -197,7 +196,8 @@ OptionalGraphPattern | MinusGraphPattern | GraphGraphPattern |
 Assuming that each stream has an IRI as identification, the \textit{StreamGraphPattern} is defined as follows:
 
 \begin{lstlisting}
-StreamGraphPattern ::= 'STREAM' '['Window']' VarOrIRIref '{'TriplesTemplate'}'
+StreamGraphPattern ::= 'STREAM' '['Window']' VarOrIRIref 
+'{'TriplesTemplate'}'
 Window ::= Rangle|Triple|'NOW'|'ALL'
 Range ::= 'RANGE' Duration ('SLIDE' Duration |'TUMBLING')?
 Triple ::= 'TRIPLES' INTEGER
@@ -212,7 +212,8 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?locName FROM NAMED <http://deri.org/floorplan/> WHERE {
+SELECT ?locName FROM NAMED <http://deri.org/floorplan/> 
+WHERE {
 	STREAM <http://deri.org/streams/rfid> [NOW]
 	{?person lv:detectedAt ?loc}
 	{?person foaf:name "AUTHORNAME"^^xsd:string }
@@ -232,11 +233,11 @@ The \textit{"A picture is worth a thousand words"} saying reflects the power ima
 
 As Linked Data is based on subject-predicate-object triples, graphs are a natural way to represent triple stores, where subject and object nodes are inter-connected through predicate links. When further analysis is applied on triples, a diverse variety of representations can be chosen to show processed information: charts, infographics, flows, etc.\cite{khan2011data}
 
-Browser-side visualization technologies such as d3.js\footnote{http://d3js.org/} (by Michael Bostock) and Raphaël\footnote{http://raphaeljs.com/} are JavaScript-based libraries to allow the visual representation of data on modern web browsers, allowing anybody with a minimum internet connection try to understand data patterns in a graphical form.
+Browser-side visualization technologies such as d3.js\footnote{\url{http://d3js.org/}} (by Michael Bostock) and Raphaël\footnote{\url{http://raphaeljs.com/}} are JavaScript-based libraries to allow the visual representation of data on modern web browsers, allowing anybody with a minimum internet connection try to understand data patterns in a graphical form.
 
-For developers not familiar with visualization techniques, some investigations are trying to enable the automatic generation of graphical representations of Linked Data query results. The \textit{LDVM} (Linked Data Visualization Model) \cite{brunetti2012linked} is proposed as a model to rapidly create visualizations of RDF data. \textit{LODVisualization}\footnote{http://lodvisualization.appspot.com/} is an implemented prototype which supports the LDVM.
+For developers not familiar with visualization techniques, some investigations are trying to enable the automatic generation of graphical representations of Linked Data query results. The \textit{LDVM} (Linked Data Visualization Model) \cite{brunetti2012linked} is proposed as a model to rapidly create visualizations of RDF data. \textit{LODVisualization}\footnote{\url{http://lodvisualization.appspot.com/}} is an implemented prototype which supports the LDVM.
 
-Visualbox\footnote{http://alangrafu.github.io/visualbox/} is a simplified edition of LODSPeaKr\footnote{http://lodspeakr.org/} focused on allowing people create visualizations using Linked Data.
+Visualbox\footnote{\url{http://alangrafu.github.io/visualbox/}} is a simplified edition of LODSPeaKr\footnote{\url{http://lodspeakr.org/}} focused on allowing people create visualizations using Linked Data.
 
 \begin{figure}
     \center
