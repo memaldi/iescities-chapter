@@ -27,7 +27,7 @@ The projects shown above can establish the basis to search for external data sou
 \subsection{Capture}
 \label{sec:capture}
 
-Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen at section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed. 
+Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen at section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed.
 
 \subsubsection{Sensor Networks}\label{sensor_networks}
 
@@ -84,10 +84,72 @@ The mapping between raw data and ontologies, usually is made by applications cre
 
 Another interesting tool is Virtuoso Sponger, a component of OpenLink Virtuoso\footnote{\url{http://virtuoso.openlinksw.com/}}. Virtuoso Sponger generates Linked Data from different data sources, through a set of extractors called \textit{Cartridges}. There are different Cartridges which support wide variety of input formats (CSV, Google KML, xHTML, XML, etc.) and vendor specific Cartridges too (Amazon, Ebay, BestBuy, Discogs, etc.).
 
-\subsection{Store}
-% Mikel
+\subsection{Store}\label{subsec:store}
 
-\subsection{Publish}
+Once data is mapped to a proper ontology and the RDF files are generated, is time to store them. Due the big amount of data generated in a city, an appropriate storage has to:
+
+\begin{itemize}
+    \item Support different input data formats.
+    \item Manage and index big amounts of data properly.
+    \item Execute queries over data in an efficient way.
+    \item Offer different interfaces and APIs to users, allowing them to consume data in a wide variety of formats.
+\end{itemize}
+
+Along this section, the first two points are discussed, while third point is discussed in section \ref{subsec:publish}.
+
+Before a wide description of each datastore we have analysed, a brief description is presented in Table \ref{tab:datastores}.
+
+\begin{table}
+    \center
+    \begin{tabular}{|c|p{2.8cm}|p{2.8cm}|p{2.8cm}|}
+        \hline
+        \textbf{Datastore} & \textbf{Input formats} & \textbf{API} & \textbf{Output formats} \\
+        \hline \hline
+        Virtuoso & RDF/XML, N3, Turtle, N-Triples, N-Quads, etc. & SPARQL, SPARQL UPDATE, Java (Jena, Sesame, Redland) & HTML, Spreadsheet, XML, RDF+JSON, JS, NTriples, RDF/XML, CSV \\
+        \hline
+        Stardog & NTRIPLES, RDF/XML, Turtle, TRIG, TRIX, N3, N-Quads & SPARQL (CLI, HTTP), Java, JS, Groovy, Spring, Ruby & N-Triples, RDF/XML, TURTLE, TRIG, TRIX, N3, N-Quads \\
+        \hline
+        Fuseki & RDF/XML, N-Triples, Turtle, etc. & SPARQL, SPARQL UPDATE, Java & JSON, XML, Text, CSV, TSV \\
+        \hline
+    \end{tabular}
+    \caption{Summary of characteristics of selected datastores.}
+    \label{tab:datastores}
+\end{table}
+
+The first datastore to be reviewed is Virtuoso by Openlink, mentioned in section \ref{subsec:process}. Virtuoso is a hybrid server that manages SQL, XML and RDF in a single server. It is available in both Open Source and commercial versions. As seen in Table \ref{tab:datastores}, it supports a wide variety of input and output formats. It has a SPARQL endpoint, accessible thus by web-interface as by HTTP GET requests, allowing to web-agents the access to data. Virtuoso supports the SPARQL UPDATE syntax, allowing the update of datastore through HTTP POST requests; and it provides connectors for different Java powered RDF engines, like Jena\footnote{\url{http://jena.apache.org/}}, Sesame\footnote{\url{http://www.openrdf.org/}} or Redland\footnote{\url{http://librdf.org/}}. Further, it supports some OWL properties for reasoning. According to the Berlin SPARQL Benchmark \cite{bizer2009berlin} Virtuoso 7 can load one billion triples in 27:11 minutes.
+
+Another datastore which is becoming popular is Stardog\footnote{\url{http://stardog.com/}}. Developed by Clark \& Parsia, Stardog is a RDF database which supports SPARQL querying and OWL reasoning. It offers a Command Line Interface to manage the different databases (create, remove, add/remove data, SPARQL queries, etc.), while they can be queried through HTTP too. Furthermore it has its own query syntax which indexes the RDF literals; and its own Java library to manage databases from Java applications. It supports OWL 2 reasoning, supporting different OWL profiles\footnote{\url{http://www.w3.org/TR/owl2-profiles/}} like QL, RL, EL or DL.
+
+The last analysed datastore is Fuseki\footnote{\url{http://jena.apache.org/documentation/serving_data/index.html}}. Part of Jena framework, Fuseki (formerly known as Joseki) offers RDF data over HTTP, in a REST style. Fuseki implements W3C's SPARQL 1.1 Query, Update, Protocol and Graph Store HTTP Protocol. It has a web-panel to manage the datastore and can interact with the rest of the Jena components.
+
+As can be seen at Table \ref{tab:datastores}, all analysed datastores are similar in terms of input/output formats or offered APIs. But there are differences in other aspects, like security: Fuseki does not support users and access roles. Another difference is the installation and executing complexity: while Fuseki and Stardog are launched as a Java JAR file, Virtuoso can be installed through Debian's package system and launched as a UNIX daemon. In the other hand, Virtuoso is more than a ``simple'' RDF store, Virtuoso is a relational database engine, an application server in which both preinstalled applications and our own applications can be launched, and much more. Furthermore, Virtuoso can be installed in a cluster formed by multiple servers.
+
+Concluding this section, we can say that Fuseki can be used in light installations, when hardware and data are limited; Stardog in more complex systems, due its fast query execution times. Meanwhile, Virtuoso offers more services like Sponger (described in section \ref{subsec:process}) or Semantic Wiki, whereby, it can be suitable for environments which need more than the simple storage of RDF triples.
+
+
+\subsection{Publish}\label{subsec:publish}
+
+Publication stage is one of the most important stages in the life cycle of Linked Data in smart cities, this stage determines how citizens or developers can acquire Linked Data to consume (section \ref{subsec:consume}) through different discovery methods (section \ref{subsec:discovery}). As we saw in section \ref{subsec:process}, the three proposed RDF stores include some publication API or SPARQL endpoint, but, sometimes the specifications of the system to be deployed need additional features at this publication stage.
+
+One of these features can be the \texttt{303 Redirection} explained at section \ref{subsec:store}. Although all datastores mentioned on section \ref{subsec:store} offer a SPARQL endpoint to explore data, Linked Data paradigm demands resolvable HTTP URIs as resource identifiers. Fortunately, there are tools which fulfil this demand. One of them, Pubby\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/pubby/}}, adds Linked Data interfaces to SPARQL endpoint. Pubby queries the proper SPARQL endpoint to retrieve data related to a given URI and manages the \texttt{303 Redirection} mechanism. Depending on the \texttt{Accept} header of the HTTP request, Pubby redirects the client to the HTML view of data or to the RDF document describing the resource. Pubby can export data in RDF/XML, NTriples, N3 and Turtle. In Figure \ref{fig:pubby} an example of the HTML view of a resource is shown.
+
+\begin{figure}
+    \center
+    \includegraphics[width=\textwidth]{img/ld_approach/pubby.png}
+    \caption{Example of HTML visualization of a resource from Hedatuz dataset by Pubby.}
+    \label{fig:pubby}
+\end{figure}
+
+D2R Server \cite{bizer2006d2r} allows the publication of relational databases as Linked Data. At first D2R requires the mapping of tables and columns from database to selected ontologies using D2RQ Mapping Language. Once this mapping is done, D2R offers a SPARQL endpoint to query data and a Pubby powered interface.
+
+\begin{figure}
+    \center
+    \includegraphics[width=\textwidth]{img/ld_approach/d2rq.png}
+    \caption{D2RQ mapping file. Example taken from http://d2rq.org/d2rq-language.}
+    \label{fig:d2rq}
+\end{figure}
+
+In the process of publishing data from smart cities as Linked Data, new ontologies are going to be created to model the particularities of each city. The creators of these ontologies have to publish a suitable documentation, allowing the proper reuse of them. A tool for publishing ontologies and their documentation is Neologism\footnote{\url{http://neologism.deri.ie/}}. Neologism shows ontologies in a human-readable manner, representing class, subclass and property relationships through diagrams.
 % Mikel
 
 \subsection{Linkage}
@@ -127,8 +189,8 @@ However, when it comes to consume Linked Data streams, SPARQL can find its limit
 Initially, a query pattern is added to represent window operators on RDF Stream:
 
 \begin{lstlisting}
-GraphPatternNotTriples ::= GroupOrUnionGraphPattern | 
-OptionalGraphPattern | MinusGraphPattern | GraphGraphPattern | 
+GraphPatternNotTriples ::= GroupOrUnionGraphPattern |
+OptionalGraphPattern | MinusGraphPattern | GraphGraphPattern |
 *StreamGraphPattern* | ServiceGraphPattern | Filter | Bind
 \end{lstlisting}
 
@@ -146,16 +208,16 @@ An example query could be:
 
 \begin{lstlisting}
 PREFIX lv: <http://deri.org/floorplan/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/> 
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?locName FROM NAMED <http://deri.org/floorplan/> WHERE {
-	STREAM <http://deri.org/streams/rfid> [NOW] 
-	{?person lv:detectedAt ?loc} 
+	STREAM <http://deri.org/streams/rfid> [NOW]
+	{?person lv:detectedAt ?loc}
 	{?person foaf:name "AUTHORNAME"^^xsd:string }
-	
-	GRAPH <http://deri.org/floorplan/> 
+
+	GRAPH <http://deri.org/floorplan/>
 	{?loc lv:name ?locName}
 }
 \end{lstlisting}
