@@ -66,54 +66,13 @@ Another interesting tool is Virtuoso Sponger, a component of OpenLink Virtuoso\f
 
 \subsection{Store}
 % Mikel
-Once data is mapped to a proper ontology and the RDF files are generated, is time to store them. Due the big amount of data generated in a city, an appropriate storage has to:
-
-\begin{itemize}
-    \item Support different input data formats.
-    \item Manage and index big amounts of data properly.
-    \item Execute queries over data in an efficient way.
-    \item Offer different interfaces and APIs to users, allowing them to consume data in a wide variety of formats.
-\end{itemize}
-
-Along this section, the first two points are discussed, while third point is discussed in section \ref{subsec:publish}.
-
-Before a wide description of each datastore we have analysed, a brief description is presented in Table \ref{tab:datastores}.
-
-\begin{table}
-    \center
-    \begin{tabular}{|c|p{2.8cm}|p{2.8cm}|p{2.8cm}|}
-        \hline
-        \textbf{Datastore} & \textbf{Input formats} & \textbf{API} & \textbf{Output formats} \\
-        \hline \hline
-        Virtuoso & RDF/XML, N3, Turtle, N-Triples, N-Quads, etc. & SPARQL, SPARQL UPDATE, Java (Jena, Sesame, Redland) & HTML, Spreadsheet, XML, RDF+JSON, JS, NTriples, RDF/XML, CSV \\
-        \hline
-        Stardog & NTRIPLES, RDF/XML, Turtle, TRIG, TRIX, N3, N-Quads & SPARQL (CLI, HTTP), Java, JS, Groovy, Spring, Ruby & N-Triples, RDF/XML, TURTLE, TRIG, TRIX, N3, N-Quads \\
-        \hline
-        Fuseki & RDF/XML, N-Triples, Turtle, etc. & SPARQL, SPARQL UPDATE, Java & JSON, XML, Text, CSV, TSV \\
-        \hline
-    \end{tabular}
-    \caption{Summary of characteristics of selected datastores.}
-    \label{tab:datastores}
-\end{table}
-
-The first datastore to be reviewed is Virtuoso by Openlink, mentioned in section \ref{subsec:process}. Virtuoso is a hybrid server that manages SQL, XML and RDF in a single server. It is available in both Open Source and commercial versions. As seen in Table \ref{tab:datastores}, it supports a wide variety of input and output formats. It has a SPARQL endpoint, accessible thus by web-interface as by HTTP GET requests, allowing to web-agents the access to data. Virtuoso supports the SPARQL UPDATE syntax, allowing the update of datastore through HTTP POST requests; and it provides connectors for different Java powered RDF engines, like Jena\footnote{\url{http://jena.apache.org/}}, Sesame\footnote{\url{http://www.openrdf.org/}} or Redland\footnote{\url{http://librdf.org/}}. Further, it supports some OWL properties for reasoning. According to the Berlin SPARQL Benchmark \cite{bizer2009berlin} Virtuoso 7 can load one billion triples in 27:11 minutes, one of things which makes Virtuoso a powerful RDF store.
-
-Another datastore which is becoming popular is Stardog\footnote{\url{http://stardog.com/}}. Developed by Clark \& Parsia, Stardog is a RDF database which supports SPARQL and OWL reasoning. It offers a Command Line Interface to manage the different databases (create, remove, add/remove data, SPARQL queries, etc.), while they can be queried through HTTP too. Furthermore it has its own query syntax which indexes the RDF literals; and its own Java library to manage databases from Java applications. It supports OWL 2 reasoning, supporting different OWL profiles\footnote{\url{http://www.w3.org/TR/owl2-profiles/}} like QL, RL, EL or DL.
-
-The last analysed datastore is Fuseki\footnote{\url{http://jena.apache.org/documentation/serving_data/index.html}}. Part of Jena framework, Fuseki (formerly known as Joseki) offers RDF data over HTTP, in a REST style. Fuseki implements W3C's SPARQL 1.1 Query, Update, Protocol and Graph Store HTTP Protocol. It has a web-panel to manage the datastore and can interact with the rest of the Jena components.
-
-As can be seen at Table \ref{tab:datastores}, all analysed datastores are similar in terms of input/output formats or offered APIs. But there are differences in other aspects, like security: Fuseki does not support users and access roles. Another difference is the installation and executing complexity: while Fuseki and Stardog are launched as a Java JAR file, Virtuoso can be installed through Debian's package system and launched as a UNIX daemon. In the other hand, Virtuoso is more than a ``simple'' RDF store, Virtuoso is a relational database engine, an application server in which both preinstalled applications and our own applications can be launched, and much more. Furthermore, Virtuoso can be installed in a cluster formed by multiple servers.
-
-Concluding this section, we can say that Fuseki can be used in light installations, when hardware and data are limited; Stardog in more complex systems, due its fast query execution times. Meanwhile, Virtuoso offers more services like Sponger (described in section \ref{subsec:process}) or Semantic Wiki, whereby, it can be suitable for environments which need more than the simple storage of RDF triples.
-
 
 \subsection{Publish}
-\label{subsec:publish}
 % Mikel
 
-\subsection{Discovery}
-\label{subsec:discovery}
-% Oscar
+\subsection{Discovery}\label{subsec:discovery}
+
+Discovery among Linked Data is a major challenge for easing data integration. Due to its interlinked nature, Linked Data provides a perfect base to extend the data present in a given dataset.
 
 The discovery stage starts a loop on the model after the publishing step, augmenting the number of third parties resources data is taken from. Discovery can be achieved following two different paths: \textit{a)} incrementing the number of datasets from where data are taken from and \textit{b)} stablishing relationships between existing data and external datasets, in order to provide links for new information stores.
 
@@ -125,7 +84,7 @@ The \textit{Silk - Link Discovery Framework} \cite{volz2009silk} offers a flexib
 
 \begin{figure}
     \center
-    \includegraphics[width=\textwidth]{img/ld_approach/silk.png}
+    \includegraphics[width=0.75\textwidth]{img/ld_approach/silk.png}
     \caption{Silk framework architecture}
 \end{figure}
 
@@ -133,12 +92,13 @@ With a similar approach \textit{LIMES} (LInk discovery framework for MEtric Spac
 
 \begin{figure}
     \center
-    \includegraphics[width=\textwidth]{img/ld_approach/limes.png}
+    \includegraphics[width=0.5\textwidth]{img/ld_approach/limes.png}
     \caption{LIMES framework architecture}
 \end{figure}
 
 \subsection{Enrichment}
-% Oscar
+
+
 
 \subsection{Consume}
 
