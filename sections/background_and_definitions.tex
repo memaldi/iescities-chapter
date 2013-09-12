@@ -1,2 +1,26 @@
 \section{Background and definitions}
 \label{subsec:background}
+
+As envisaged by Sir Tim Berners-Lee, the Web is moving from a interlinked documents space to a global information one where both documents and data are linked: The Semantic Web \cite{berners2001semantic}.
+
+Linked Data is a set of best practices to publish data on the Web in a machine-readable way, with a explicitly defined semantic meaning, linked to other datasets and allowed to be searched for \cite{bizer2009linked}.
+
+In 2006, Sir Tim Berners-Lee described a set of principles to publish Linked Data on the Web:
+
+\begin{enumerate}
+  \item Use URIs as names for things
+  \item Use HTTP URIs so that people can look up those names
+  \item When someone looks up a URI, provide useful information, using the standard (RDF, SPARQL)
+  \item Include links to other URIs, so that they can discover more things \\[\baselineskip]
+\end{enumerate} 
+
+Later, in 2010, he established a five-star rating system to encourage people and governments to publish high-quality Linked Open Data: 
+
+\begin{tabular}{ l p{0.75\linewidth} }
+  $\star$ & Available on the web (whatever format) but with an \textbf{open licence}, to be Open Data \\
+  $\star$ $\star$ & Available as machine-readable structured data (e.g. excel instead of image scan of a table) \\
+  $\star$ $\star$ $\star$ & as (2) plus non-propietary format (e.g. CSV instead of excel) \\
+  $\star$ $\star$ $\star$ $\star$ & All the above plus: Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff \\
+  $\star$ $\star$ $\star$ $\star$ $\star$ & All the above plus: Link your data to other people's data to provide context \\[\baselineskip]
+\end{tabular}
+
