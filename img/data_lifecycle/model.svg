@@ -11,7 +11,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="675.0509"
+   width="1185.3859"
    height="596.38318"
    id="svg2"
    version="1.1"
@@ -186,9 +186,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54890525"
-     inkscape:cx="-121.45801"
-     inkscape:cy="621.29357"
+     inkscape:zoom="0.77626925"
+     inkscape:cx="569.62222"
+     inkscape:cy="284.43201"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -217,10 +217,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-318.40969,-334.21554)">
+     transform="translate(-67.012542,-334.21554)">
     <g
        id="g3149"
-       transform="translate(268.36857,246.69674)">
+       transform="translate(268.36858,246.69674)">
       <rect
          y="546.05475"
          x="50.507622"
@@ -266,7 +266,7 @@
     </g>
     <g
        id="g3144"
-       transform="translate(-805.10559,246.69674)">
+       transform="translate(-1324.8713,246.69674)">
       <rect
          y="546.05475"
          x="1392.3503"
@@ -553,7 +553,7 @@
     </g>
     <g
        id="g4048-1-0"
-       transform="matrix(-0.58752104,0,0,-0.47267934,629.20741,1063.9079)">
+       transform="matrix(0.58752104,0,0,0.47267934,154.41142,658.97583)">
       <rect
          y="417.40759"
          x="105.75541"
@@ -577,6 +577,58 @@
          sodipodi:cx="104.28571"
          sodipodi:sides="3"
          id="path4046-9-6"
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.93300003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="star" />
+    </g>
+    <g
+       id="g3079"
+       transform="translate(-6,13.288781)">
+      <rect
+         y="779.46271"
+         x="1120.5511"
+         height="137.38075"
+         width="137.38075"
+         id="rect3841-8-9-3"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:0.93300003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3843-98-5-1"
+         y="858.84906"
+         x="1134.0084"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:impact;-inkscape-font-specification:impact"
+         xml:space="preserve"><tspan
+           id="tspan3932-9-3"
+           style="font-size:28px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           y="858.84906"
+           x="1134.0084"
+           sodipodi:role="line">Visualize</tspan></text>
+    </g>
+    <g
+       id="g4048-0-3"
+       transform="matrix(0.58752104,0,0,0.47267934,946.31604,659.8574)">
+      <rect
+         y="417.40759"
+         x="105.75541"
+         height="21.858789"
+         width="102.85714"
+         id="rect4042-0-7"
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.62589902;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:transform-center-y="-17.142857"
+         inkscape:transform-center-x="-4.0824217"
+         transform="translate(121.46969,667.07268)"
+         d="m 138.57143,-238.7357 -51.428576,29.6923 2e-6,-59.38461 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="3.6464676e-08"
+         sodipodi:r2="34.837524"
+         sodipodi:r1="34.285717"
+         sodipodi:cy="-238.7357"
+         sodipodi:cx="104.28571"
+         sodipodi:sides="3"
+         id="path4046-3-8"
          style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.93300003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="star" />
     </g>
