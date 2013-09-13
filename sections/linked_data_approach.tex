@@ -22,12 +22,12 @@ Sindice\footnote{\url{http://sindice.com/}} \cite{tummarello2007sindice} is a pl
 
 Finally, Sig.ma\footnote{\url{http://sig.ma/}} \cite{tummarello2010sig} uses Sindice's search engine to construct a view on top of the discovered data on the Web in an integrated information space.
 
-The projects shown above can establish the basis to search for external data sources, on top of which further analysis and refinement processes can be built.
+The projects described above can establish the basis to search for external data sources, on top of which further analysis and refinement processes can be built.
 
 \subsection{Capture}
 \label{sec:capture}
 
-Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along the city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen at section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed.
+Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along the city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen in section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed.
 
 \subsubsection{Sensor Networks}\label{sensor_networks}
 
@@ -65,16 +65,16 @@ To illustrate the importance of Government Open Data, in Table \ref{tab:open dat
         \label{tab:open data portals}
     \end{table}
 
-As have been shown, in a smart city a lot of data sources can be found, publishing an abundant stream of interesting data in a different and heterogeneous manner. In section \ref{subsec:process}, how transform these data in a standard formats is shown.
+As have been shown, in a smart city a lot of data sources can be found, publishing an abundant stream of interesting data in a different and heterogeneous manner. In section \ref{subsec:process}, how to transform these data in a standard formats is shown.
 
 \subsection{Process}
 \label{subsec:process}
 
 As can be seen at section \ref{subsec:background}, Linked Data paradigm proposed the Resource Description Framework (RDF) as the best format to publish data and the reuse of widely extended ontologies. In this section we explain \textbf{what} is an ontology, \textbf{which} are the most popular ontologies and \textbf{how} we can map previously captured raw data to a proper ontology. At the end of this section a set of best practices to construct suitable URIs for Lined Data are shown.
 
-As defined by \cite{noy_ontology_2001}, an ontology is \textit{a formal explicit description of concepts in a domain of discourse, properties of each concept describing various features and attributes of the concept, and restrictions on slots}. According to this definition, an ontology has \textit{Classes} which represent the concept, \textit{Properties} which represent different characteristic of \textit{Classes} and \textit{Restrictions} on the values of these properties and relationships among different \textit{Classes}. An ontology allows modelling data avoiding most of ambiguities originated when fusing data from different sources, stimulating the interoperability among different sources. As we see in section \ref{sec:capture} in a smart city, data came from a wide variety of sources, whereby the ontologies seem to be a suitable option to model these data.
+As defined by \cite{noy_ontology_2001}, an ontology is \textit{a formal explicit description of concepts in a domain of discourse, properties of each concept describing various features and attributes of the concept, and restrictions on slots}. According to this definition, an ontology has \textit{Classes} which represent the concept, \textit{Properties} which represent different characteristic of \textit{Classes} and \textit{Restrictions} on the values of these properties and relationships among different \textit{Classes}. An ontology allows modelling data avoiding most of ambiguities originated when fusing data from different sources, stimulating the interoperability among different sources. As seen in section \ref{sec:capture}, data may come from a wide variety of sources in smart cities, whereby the ontologies seem to be a suitable option to model these data.
 
-Following works use ontologies to model different data sources which can be found in a smart city. In Bizkaisense project \cite{emaldi_short_2012}, diverse ontologies like Semantic Sensor Network ontology (SSN) \cite{lefort_semantic_2011}, Semantic Web for Earth and Environmental Terminology (SWEET) \cite{raskin_knowledge_2005} or Unified Code for Units of Measure ontology (UCUM)\footnote{\url{http://idi.fundacionctic.org/muo/ucum-instances.html}} are used to model raw data from air quality stations from Basque Country. AEMET Linked Data project\footnote{\url{http://aemet.linkeddata.es/models.html}} has developed a network of ontologies composed by SSN ontology, OWL-Time ontology\footnote{\url{http://www.w3.org/TR/owl-time/}}, wsg84\_pos ontology\footnote{\url{http://www.w3.org/2003/01/geo/wgs84_pos}}, GeoBuddies ontology network\footnote{\url{http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/ontologies/83-geobuddies-ontologies}} and its own AEMET ontology, to describe measurements taken by meteorological stations from AEMET (Spanish National Weather Service). In \cite{d2011enabling} authors extend SSN ontology to model and publish as Linked Data the data stream generated by the sensors of an Android powered smartphone.
+The following works use ontologies to model different data sources which can be found in a smart city. In Bizkaisense project \cite{emaldi_short_2012}, diverse ontologies like Semantic Sensor Network ontology (SSN) \cite{lefort_semantic_2011}, Semantic Web for Earth and Environmental Terminology (SWEET) \cite{raskin_knowledge_2005} or Unified Code for Units of Measure ontology (UCUM)\footnote{\url{http://idi.fundacionctic.org/muo/ucum-instances.html}} are used to model raw data from air quality stations from Basque Country. AEMET Linked Data project\footnote{\url{http://aemet.linkeddata.es/models.html}} has developed a network of ontologies composed by SSN ontology, OWL-Time ontology\footnote{\url{http://www.w3.org/TR/owl-time/}}, wsg84\_pos ontology\footnote{\url{http://www.w3.org/2003/01/geo/wgs84_pos}}, GeoBuddies ontology network\footnote{\url{http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/ontologies/83-geobuddies-ontologies}} and its own AEMET ontology, to describe measurements taken by meteorological stations from AEMET (Spanish National Weather Service). In \cite{d2011enabling} authors extend SSN ontology to model and publish as Linked Data the data stream generated by the sensors of an Android powered smartphone.
 
 Another example of semantic modelling of infrastructures from a city can be found in LinkedQR \cite{emaldi2012linkedqr}. LinkedQR is an application that eases the managing task of an art gallery allowing the elaboration of interactive tourism guides through third parties Linked Data and manual curation. LinkedQR uses MusicOntology \cite{raimond2007music} to describe the audioguides and Dublin Core \cite{weibel1998dublin}, DBpedia Ontology\footnote{\url{http://dbpedia.org/ontology/}} and Yago \cite{suchanek2007yago} to describe other basic information.
 
@@ -122,12 +122,12 @@ Once data is mapped to a proper ontology and the RDF files are generated, is tim
     \item Support different input data formats.
     \item Manage and index big amounts of data properly.
     \item Execute queries over data in an efficient way.
-    \item Offer different interfaces and APIs to users, allowing them to consume data in a wide variety of formats.
+    \item Offer different interfaces and APIs to users, allowing them to exploit data in a wide variety of formats.
 \end{itemize}
 
 Along this section, the first two points are discussed, while the third is discussed in section \ref{subsec:publish}.
 
-Before a wide description of each datastore we have analysed, a brief description is presented in Table \ref{tab:datastores}.
+Before a wide description of each analysed datastore is given, a brief description is presented in Table \ref{tab:datastores}.
 
 \begin{table}
     \center
@@ -154,12 +154,12 @@ The last analysed datastore is Fuseki\footnote{\url{http://jena.apache.org/docum
 
 As can be seen at Table \ref{tab:datastores}, all analysed datastores are similar in terms of input/output formats or offered APIs. But there are differences in other aspects, like security: Fuseki does not support users nor access roles. Another difference is the installation and executing complexity: while Fuseki and Stardog are launched as a Java JAR file, Virtuoso can be installed through Debian's package system and launched as a UNIX daemon. In the other hand, Virtuoso is more than a ``simple'' RDF store, Virtuoso is a relational database engine, an application server in which both preinstalled applications and our own applications can be launched, and much more. Furthermore, Virtuoso can be installed in a cluster formed by multiple servers.
 
-Concluding this section, we can say that Fuseki can be used in light-weight installations, when hardware and data are limited; Stardog in more complex systems, due its fast query execution times. Meanwhile, Virtuoso offers more services like Sponger (described in section \ref{subsec:process}) or Semantic Wiki, whereby, it can be suitable for environments which need more than the simple storage of RDF triples.
+Concluding this section, we can say that Fuseki can be used in light-weight installations, when hardware and data are limited; Stardog in more complex systems, due to its fast query execution times. Meanwhile, Virtuoso offers more services like Sponger (described in section \ref{subsec:process}) or Semantic Wiki, whereby, it can be suitable for environments which need more than the simple storage of RDF triples.
 
 
 \subsection{Publish}\label{subsec:publish}
 
-Publication stage is one of the most important stages in the life cycle of Linked Data in smart cities, this stage determines how citizens or developers can acquire Linked Data to consume (section \ref{subsec:consume}) through different discovery methods (section \ref{subsec:discovery}). As we saw in section \ref{subsec:store}, the three proposed RDF stores include some publication API or SPARQL endpoint, but, sometimes the specifications of the system to be deployed need additional features at this publication stage.
+Publication stage is one of the most important stages in the life cycle of Linked Data in smart cities, this stage determines how citizens or developers can acquire Linked Data to exploit (section \ref{subsec:exploit}) through different discovery methods (section \ref{subsec:discovery}). As we saw in section \ref{subsec:store}, the three proposed RDF stores include some publication API or SPARQL endpoint, but, sometimes the specifications of the system to be deployed need additional features at this publication stage.
 
 One of these features can be the \texttt{303 Redirection} explained at section \ref{subsec:process}. Although all datastores mentioned on section \ref{subsec:store} offer a SPARQL endpoint to explore data, Linked Data paradigm demands resolvable HTTP URIs as resource identifiers. Fortunately, there are tools which fulfil this demand. One of them, Pubby\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/pubby/}}, adds Linked Data interfaces to SPARQL endpoint. Pubby queries the proper SPARQL endpoint to retrieve data related to a given URI and manages the \texttt{303 Redirection} mechanism. Depending on the \texttt{Accept} header of the HTTP request, Pubby redirects the client to the HTML view of data or to the RDF document describing the resource. Pubby can export data in RDF/XML, NTriples, N3 and Turtle. In Figure \ref{fig:pubby} an example of the HTML view of a resource is shown.
 
@@ -189,32 +189,34 @@ The linkage stage starts a loop on the model after the publishing step, establis
 
 Different frameworks have been developed to deal with class and properties matching. The basis of these frameworks is to provide data discovery features through links to external entities related to the items used in the analysis.
 
-The \textit{Silk - Link Discovery Framework} \cite{volz2009silk} offers a flexible tool for discovering links between entities within different Web data sources. Silk makes use of \textit{Silk - Link Specification Language} (Silk-LSL), a declarative language which lets data publishers specify which RDF link types should be discovered providing two related datasets, and the conditions under data items must fulfill to be interlinked. As an example, a script in Silk-LSL can be written to match cities between \textit{DBpedia} ontology's \textit{City} or \textit{PopulatedPlace} classes, and \textit{GeoName}'s feature class \textit{gn:P}. As constraints, string similarity metrics can be used to match city names, and take into consideration cities' bounding boxes (i.e. the margins projected on a map) to check overlaps.
+The \textit{Silk - Link Discovery Framework} \cite{volz2009silk} offers a flexible tool for discovering links between entities within different Web data sources. Silk makes use of \textit{Silk - Link Specification Language} (Silk-LSL), a declarative language which lets data publishers specify which RDF link types should be discovered providing two related datasets, and the conditions under data items must fulfill to be interlinked. Silk framework's architecture is depicted in Figure \ref{fig:silk}. As an example, a script in Silk-LSL can be written to match cities between \textit{DBpedia} ontology's \textit{City} or \textit{PopulatedPlace} classes, and \textit{GeoName}'s feature class \textit{gn:P}. As constraints, string similarity metrics can be used to match city names, and take into consideration cities' bounding boxes (i.e. the margins projected on a map) to check overlaps.
 
 \begin{figure}
     \center
     \includegraphics[width=0.75\textwidth]{img/ld_approach/silk.png}
     \caption{Silk framework architecture}
+    \label{fig:silk}
 \end{figure}
 
-With a similar approach \textit{LIMES} (LInk discovery framework for MEtric Spaces) \cite{ngomo2011limes} can be used for the discovery of links between Linked Data knowledge bases, focusing on a time-efficient approach especially when working with large-scale matching tasks. LIMES relies on \textit{triangle inequality} mathematical principles for distance calculations, which reduce the number of comparisons necessary to complete a mapping by several orders of magnitude. This approach helps detecting the pairs that will not fulfil the requirements in an early stage, thus avoiding spending time in more time-consuming processing.
+With a similar approach \textit{LIMES} (LInk discovery framework for MEtric Spaces) \cite{ngomo2011limes} can be used for the discovery of links between Linked Data knowledge bases, focusing on a time-efficient approach especially when working with large-scale matching tasks. LIMES relies on \textit{triangle inequality} mathematical principles for distance calculations, which reduce the number of comparisons necessary to complete a mapping by several orders of magnitude. This approach helps detecting the pairs that will not fulfil the requirements in an early stage, thus avoiding spending time in more time-consuming processing. The architecture followed by LIMES framework is depicted in Figure \ref{fig:limes}.
 
 \begin{figure}
     \center
     \includegraphics[width=0.5\textwidth]{img/ld_approach/limes.png}
     \caption{LIMES framework architecture}
+    \label{fig:limes}
 \end{figure}
 
-\subsection{Consume}
-\label{subsec:consume}
+\subsection{Exploit}
+\label{subsec:exploit}
 
-At this stage, the focus is located on consuming data for business-logic processes, should they involve data mining algorithms, analytics, reasoning, etc.
+At this stage, the focus is located on exploiting data for business-logic processes, should they involve data mining algorithms, analytics, reasoning, etc.
 
 Whereas complex processing algorithms can be used independently of the dataset format, Linked Open Data can greatly help at reasoning purposes. Linked Open Data describes entities using ontologies, semantic constraints and restriction rules (belonging, domain, range, etc.) which favor the inference of new information from the existing one. Thanks to those semantics present in Linked Data, algorithms are not fed with raw values (numbers, strings...), but with semantically meaningful information (height in cm, world countries, company names...), thus resulting in higher quality outputs and making algorithms more error aware (i.e., if a given algorithm is in charge of mapping the layout of a mountainous region, and founds the height of one of the mountains to be \textit{3.45}, it is possible to detect the conversion has failed at some point, as height datatype was expected to be given in \textit{meters}).
 
 As seen in sections \ref{sensor_networks} and \ref{social_networks}, sensors and social networks are common data input resources, generating huge amounts of data streamed in real time. The work done in \cite{sequeda2009linked} comprises a set of best practices to publish and link stream data to be part of the Semantic Web.
 
-However, when it comes to consume Linked Data streams, SPARQL can find its limits \cite{della2009s}. Stream-querying languages such as CQELS's\footnote{\url{https://code.google.com/p/cqels/}} language (an extension of the declarative SPARQL 1.1 language using the EBNF notation) can greatly help in the task. CQELS\cite{le2011native} (Continuous Query Evaluation over Linked Stream) is a native and adaptive query processor for unified query processing over Linked Stream Data and Linked Data developed at DERI Galway\footnote{\url{http://www.deri.ie/}}.
+However, when it comes to exploiting Linked Data streams, SPARQL can find its limits \cite{della2009s}. Stream-querying languages such as CQELS's\footnote{\url{https://code.google.com/p/cqels/}} language (an extension of the declarative SPARQL 1.1 language using the EBNF notation) can greatly help in the task. CQELS\cite{le2011native} (Continuous Query Evaluation over Linked Stream) is a native and adaptive query processor for unified query processing over Linked Stream Data and Linked Data developed at DERI Galway\footnote{\url{http://www.deri.ie/}}.
 
 Initially, a query pattern is added to represent window operators on RDF Stream:
 
@@ -258,7 +260,7 @@ Eventually, both batch and streamming results can be consumed through \textit{RE
 
 \subsection{Visualize}
 
-In order to make meaning from data, humans have developed a great ability to understand visual representations. The main objective of data visualization is to communicate information in a clean and effective way through graphical means. It's also suggested that visualization should also encourage users engagement and attention.
+In order to make meaning from data, humans have developed a great ability to understand visual representations. The main objective of data visualization is to communicate information in a clean and effective way through graphical means. It is also suggested that visualization should also encourage users engagement and attention.
 
 The \textit{"A picture is worth a thousand words"} saying reflects the power images and graphics have when expressing information, and can condense big datasets into a couple of representative, powerful images.
 
@@ -268,12 +270,13 @@ Browser-side visualization technologies such as d3.js\footnote{\url{http://d3js.
 
 For developers not familiar with visualization techniques, some investigations are trying to enable the automatic generation of graphical representations of Linked Data query results. The \textit{LDVM} (Linked Data Visualization Model) \cite{brunetti2012linked} is proposed as a model to rapidly create visualizations of RDF data. \textit{LODVisualization}\footnote{\url{http://lodvisualization.appspot.com/}} is an implemented prototype which supports the LDVM.
 
-Visualbox\footnote{\url{http://alangrafu.github.io/visualbox/}} is a simplified edition of LODSPeaKr\footnote{\url{http://lodspeakr.org/}} focused on allowing people create visualizations using Linked Data.
+Visualbox\footnote{\url{http://alangrafu.github.io/visualbox/}} is a simplified edition of LODSPeaKr\footnote{\url{http://lodspeakr.org/}} focused on allowing people create visualizations using Linked Data. In Figure \ref{fig:visualbox}, a SPARQL query to retrieve the number of Nobel laureates in Physics by country is displayed in interactive pie and bar charts.
 
 \begin{figure}
     \center
     \includegraphics[width=\textwidth]{img/ld_approach/graph.png}
     \caption{Visualbox graph example (ownership: Alvaro Graves).}
+    \label{fig:visualbox}
 \end{figure}
 
 Independently of how visualizations are generated, they provide a perfect solution to present high-quality, refined data to end-users.

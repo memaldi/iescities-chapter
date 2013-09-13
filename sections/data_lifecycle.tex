@@ -1,6 +1,6 @@
 \section{Data Life Cycle}
 
-Throughout the literature, a variety of different definitions of data life cycle models can be found. Although they have been developed for different actuation domains, we describe here some of them which we think that can be applied for generic data, independently of its original domain.
+Throughout the literature, a variety of different definitions of data life cycle models can be found. Although they have been developed for different actuation domains, we describe here some of them which could be applied for generic data, independently of its original domain.
 
 \subsection{Data Documentation Initiative}
 
@@ -111,7 +111,7 @@ The last analyzed data life cycle has been developed under the LOD2\footnote{\ur
 
 \subsection{A common data life cycle for smart cities}
 
-Based on these data life cycle models, we propose a common data life cycle for managing data in smart cities. As can be seen at Figure \ref{fig:model}, the different stages of mentioned models have been aggregated, forming our proposed model.
+Based on these data life cycle models, we propose a common data life cycle for managing data in smart cities. As can be seen in Figure \ref{fig:model}, the different stages of the mentioned models have been aggregated, forming our proposed model.
 %\begin{table}
 %    \centering
 %    \begin{tabular}{|l|l|l|l|l|}
@@ -140,12 +140,12 @@ Based on these data life cycle models, we propose a common data life cycle for m
 The different stages of this model, which are going to be explained widely in following sections, are:
 \begin{itemize}
 	\item \textbf{Discovery:} The first step in our model consists of discovering where data can be taken from, identifying the available datasets which contain the necessary data to accomplish our task. Datasources can either be maintained by us, or by external entities, so the more metadata we can gather from datasets, the easier further steps will become.
-    \item \textbf{Capture:} Once datasources are identified, data needs to be collected. In a smart city environment, there are a lot of alternatives to capture data, like sensors, data published by public administration, social networks or in more traditional way like surveys.
+    \item \textbf{Capture:} Once datasources are identified, data need to be collected. In a smart city environment, there are a lot of alternatives to capture data, like sensors, data published by public administration, social networks, mobile sensing, user generated data or in more traditional ways like surveys.
     \item \textbf{Process:} After the required data are captured, they are prepared to be stored and in need of proper methods to explore them. This processing involves the analyzing, refining, cleaning, formatting and transformation of the data.
     \item \textbf{Store:} The storage of data is, probably, the most delicate action in the life cycle. Above the storage  all the analysis tools are build, and is the ``final endpoint'' when someone requests our data. A suitable storage should have indexing, replication, distribution and backup features, among other services.
-    \item \textbf{Publish:} Most of the previously mentioned models prioritize the analysing stage over the publication stage. In our model, we defend the opposite approach for a very simple reason: when you consume your data before their publication, and using different processes as the rest of the people who is going to consume them, you are not making enough emphasis on publishing these data correctly. Everybody has ever met a research paper or an application in which accessing the data was difficult, or, when once the data was collected it became totally incomprehensible. To avoid this issue, we propose to publish the data before their consumption, following the same process the rest of the people does.
+    \item \textbf{Publish:} Most of the previously mentioned models prioritize the analysing stage over the publication stage. In our model, we defend the opposite approach for a very simple reason: when you exploit your data before their publication, and using different processes as the rest of the people who is going to use them, you are not making enough emphasis on publishing these data correctly. Everybody has ever met a research paper or an application in which accessing the data was difficult, or, when once the data was collected it became totally incomprehensible. To avoid this issue, we propose to publish the data before their consumption, following the same process the rest of the people do.
     \item \textbf{Linkage:} Before consuming data, we suggest to search for links and relationships with other datasets found in the discovery step. Actual solutions do not allow the linkage with unknown datasets, but tools are developed to ease link discovery processes between two or more given datasources.
-    \item \textbf{Consume:} Once the data is published, we use the provided methods to consume the data. This data consumption involves data mining, analytics or reasoning.
+    \item \textbf{Exploit:} Once the data is published, we use the provided methods to make use of the data. This data consumption involves data mining, analytics or reasoning.
     \item \textbf{Visualize:} To understand data properly, designing suitable visualizations is essential to show correlations between data and the conclusions of the data analysis in a human-understandable way.
     
 \end{itemize}
