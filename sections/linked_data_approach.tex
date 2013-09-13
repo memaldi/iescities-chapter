@@ -70,7 +70,7 @@ As have been shown, in a smart city a lot of data sources can be found, publishi
 \subsection{Process}
 \label{subsec:process}
 
-As can be seen at section \ref{subsec:background}, Linked Data paradigm proposed the Resource Description Framework (RDF) as the best format to publish data and the reuse of widely extended ontologies. In this section we explain \textbf{what} is an ontology, \textbf{which} are the most popular ontologies and \textbf{how} we can map previously captured raw data to a proper ontology.
+As can be seen at section \ref{subsec:background}, Linked Data paradigm proposed the Resource Description Framework (RDF) as the best format to publish data and the reuse of widely extended ontologies. In this section we explain \textbf{what} is an ontology, \textbf{which} are the most popular ontologies and \textbf{how} we can map previously captured raw data to a proper ontology. At the end of this section a set of best practices to construct suitable URIs for Lined Data are shown.
 
 As defined by \cite{noy_ontology_2001}, an ontology is \textit{a formal explicit description of concepts in a domain of discourse, properties of each concept describing various features and attributes of the concept, and restrictions on slots}. According to this definition, an ontology has \textit{Classes} which represent the concept, \textit{Properties} which represent different characteristic of \textit{Classes} and \textit{Restrictions} on the values of these properties and relationships among different \textit{Classes}. An ontology allows modelling data avoiding most of ambiguities originated when fusing data from different sources, stimulating the interoperability among different sources. As we see in section \ref{sec:capture} in a smart city, data came from a wide variety of sources, whereby the ontologies seem to be a suitable option to model these data.
 
@@ -83,6 +83,36 @@ LinkedStats project\footnote{\url{http://helheim.deusto.es/linkedstats}} takes d
 The mapping between raw data and ontologies, usually is made by applications created \textit{ad-hoc} to each case; Bizkaisense, AEMET Linked Data and LinkedStats have their own Python\footnote{\url{http://www.python.org/}} scripts to generate proper RDF files from raw data. In the case of LinkedQR, it has a control panel where the manager can manually type data and map to a desired ontology. Instead, there are tools designed for transforming raw data into structured data. One of them is Open Refine\footnote{\url{http://openrefine.org/}} (formerly Google Refine). Open Refine is a web-tool which can apply different manipulations to data (facets, filters, splits, merges, etc.) and export data in different formats based on custom templates. Additionally, Google Refine RDF Extension\footnote{\url{http://refine.deri.ie/}} allows exporting data in RDF.
 
 Another interesting tool is Virtuoso Sponger, a component of OpenLink Virtuoso\footnote{\url{http://virtuoso.openlinksw.com/}}. Virtuoso Sponger generates Linked Data from different data sources, through a set of extractors called \textit{Cartridges}. There are different Cartridges which support wide variety of input formats (CSV, Google KML, xHTML, XML, etc.) and vendor specific Cartridges too (Amazon, Ebay, BestBuy, Discogs, etc.).
+
+After modelling data, one of most important concepts in Linked Data are the URIs or Unified Resource Identifiers. As shown in section \ref{subsec:background}, to publish a data resource as Linked Data it has to be identified by an HTTP URI which satisfies these conditions:
+\begin{itemize}
+    \item A HTTP URI is unique and consistent.
+    \item A HTTP URI can be accessed from everywhere by everyone.
+    \item The URI and its hierarchy are auto-descriptive.
+\end{itemize}
+
+Designing valid URIs is a very important step into the publication of Linked Data: if you change URIs of your data, all the incoming links from external sources are going to be broken. To avoid this issue there is a set of good practices, proposed in \cite{ayers2008cool}:
+
+\begin{itemize}
+    \item \textbf{Be on the web.} Return RDF for machines and HTML for humans through standard HTTP protocol.
+    \item \textbf{Don't be ambiguous.} Use a URL to describe a document and a different URI to identify real-world objects. A URI can't stand for both document and real-world object.
+\end{itemize}
+
+To apply these good practices correctly, authors propose two solutions, which nowadays have been widely adopted by Linked Data community:
+
+\begin{itemize}
+    \item \textbf{303 URIs.} Use \texttt{303 See Other} status code for redirecting to the proper RDF description of the real world object or to the HTML document. For example:
+    \begin{itemize}
+        \item \url{http://helheim.deusto.es/hedatuz/resource/biblio/5112} - A URI identifying a bibliographic item.
+        \item \url{http://helheim.deusto.es/hedatuz/page/biblio/5112} - The HTML view of the item.
+        \item \url{http://helheim.deusto.es/hedatuz/data/biblio/5112} - A RDF document describing the item.
+    \end{itemize}
+
+    \item \textbf{Hash URIs.} URIs contains a \textit{fragment}, a special part separated by the symbol \textit{\#}. The client has to strip-off the fragment from the URI before requesting it to server. Server returns a RDF document in which the client has to search the fragment.
+\end{itemize}
+
+Tools implementing these techniques are described on section \ref{subsec:publish}.
+
 
 \subsection{Store}\label{subsec:store}
 
