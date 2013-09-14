@@ -27,7 +27,7 @@ The projects described above can establish the basis to search for external data
 \subsection{Capture}
 \label{sec:capture}
 
-Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along the city, social networks or publicly available government data. In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen in section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed.
+Data are the basis of smart cities, undoubtedly: services offered to citizens, decisions offered to city rulers by Decision Support Systems, all of them work thanks to big amounts of data. These data are captured from a wide variety of sources, like sensor networks installed along the city, social networks, publicly available government data or citizens/users who prosume data through their devices (they crowdsource data, or the devices themselves generate automaticaly sensing data). In most cases, these sources publish data in a wide set of heterogeneous formats, forcing data consumers to develop different connectors for each source. As can be seen in section \ref{subsec:process}, there are a lot of different and widely extended ontologies which can represent data acquired from sources found in smart cities, easing the capture, integration and publication of data from heterogeneous domains. In this section, different sources of data which can be found in smart cities are shown, while in section \ref{subsec:process} the transformation process from their raw data to Linked Data is exposed.
 
 \subsubsection{Sensor Networks}\label{sensor_networks}
 
@@ -66,6 +66,8 @@ To illustrate the importance of Government Open Data, in Table \ref{tab:open dat
     \end{table}
 
 As have been shown, in a smart city a lot of data sources can be found, publishing an abundant stream of interesting data in a different and heterogeneous manner. In section \ref{subsec:process}, how to transform these data in a standard formats is shown.
+
+\subsubsection{Mobile sensing and user generated data.} Another important data source in which smart cities can capture data are the citizens themselves. Citizens can interact with city in multiple ways: for example, in \cite{emalditrust} an interactive 311 service is described. In this work, authors propose a model to share and validate, through provenance and reputation analysis, reports about city published by citizens. In Urbanopoly \cite{celino_urbanopoly_2012} and Urbanmatch \cite{celino_urbanmatch_2012}, different games are presented to tourist with the aim of recollecting data and photographies from tourist points of interest from city, through their smartphones. In the same line, csxPOI \cite{braun_collaborative_2010} creates semantically annotated POIs through data gathered by citizens, allowing semi-automatic merging of duplicate POIs and deleting of incorrect POIs.
 
 \subsection{Curate}
 \label{subsec:process}
