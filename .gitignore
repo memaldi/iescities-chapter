@@ -30,5 +30,6 @@
 *.vrb
 *.xdy
 *.tdo
-
+*.fls
+latexmkrc
 .DS_Store
