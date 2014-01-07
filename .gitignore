@@ -33,3 +33,6 @@
 *.fls
 latexmkrc
 .DS_Store
+*~
+.latexmkrc
+*.orig
