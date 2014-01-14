@@ -156,8 +156,6 @@ Concluding this section, we can say that Fuseki can be used in light-weight inst
 
 Publication stage is one of the most important stages in the life cycle of Linked Data in smart cities, because this stage determines how citizens or developers can acquire Linked Data to exploit (section \ref{subsec:exploit}) through different discovery methods (section \ref{subsec:discovery}). As we saw in section \ref{subsec:store}, the three proposed RDF stores include some publication API or SPARQL endpoint, but, sometimes the specifications of the system to be deployed need additional features at this publication stage.
 
-One of these features can be the \texttt{303 Redirection} explained at section \ref{subsec:process}. Although all datastores mentioned on section \ref{subsec:store} offer a SPARQL endpoint to explore data, Linked Data paradigm demands resolvable HTTP URIs as resource identifiers. Fortunately, there are tools which fulfil this demand. One of them, Pubby\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/pubby/}}, adds Linked Data interfaces to SPARQL endpoint. Pubby queries the proper SPARQL endpoint to retrieve data related to a given URI and manages the \texttt{303 Redirection} mechanism. Depending on the \texttt{Accept} header of the HTTP request, Pubby redirects the client to the HTML view of data or to the RDF document describing the resource. Pubby can export data in RDF/XML, NTriples, N3 and Turtle. In Figure \ref{fig:pubby} an example of the HTML view of a resource is shown.
-
 \begin{figure}
     \center
     \includegraphics[width=0.92\textwidth]{img/ld_approach/pubby.png}
@@ -165,14 +163,42 @@ One of these features can be the \texttt{303 Redirection} explained at section \
     \label{fig:pubby}
 \end{figure}
 
+One of these features can be the \texttt{303 Redirection} explained at section \ref{subsec:process}. Although all datastores mentioned on section \ref{subsec:store} offer a SPARQL endpoint to explore data, Linked Data paradigm demands resolvable HTTP URIs as resource identifiers. Fortunately, there are tools which fulfil this demand. One of them, Pubby\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/pubby/}}, adds Linked Data interfaces to SPARQL endpoint. Pubby queries the proper SPARQL endpoint to retrieve data related to a given URI and manages the \texttt{303 Redirection} mechanism. Depending on the \texttt{Accept} header of the HTTP request, Pubby redirects the client to the HTML view of data or to the RDF document describing the resource. Pubby can export data in RDF/XML, NTriples, N3 and Turtle. In Figure \ref{fig:pubby} an example of the HTML view of a resource is shown.
+
 D2R Server \cite{bizer2006d2r} allows the publication of relational databases as Linked Data. At first D2R requires a mapping from the tables and columns of the database to selected ontologies using D2RQ Mapping Language. Once this mapping is done, D2R offers a SPARQL endpoint to query data and a Pubby powered interface.
 
 \begin{figure}
     \center
-    \includegraphics[width=0.98\textwidth]{img/ld_approach/d2rq.png}
+    \includegraphics[width=0.85\textwidth]{img/ld_approach/d2rq.png}
     \caption{D2RQ mapping file. Example taken from http://d2rq.org/d2rq-language.}
     \label{fig:d2rq}
 \end{figure}
+
+Besides the publication of the data itself, it is important to consider the publication of provenance information about it. In \cite{gil_towards_2007} the authors identify the publication of provenance data as one of the main factors that influence web content trust. At the time of publishing provenance information two approaches can be taken: the first is to publish basic metadata like when or who created and published the data; the second is to provide a more detailed description of where the data come from, including versioning information or the description of the data transformation workflow, for example. Some ontologies help us in the process of providing provenance descriptions of Linked Data. Basic provenance metadata can be provided using Dublin Core terms, like \textit{dcterms\footnote{\url{http://purl.org/dc/terms/}}:contributor}, \textit{dcterms:creator} or \textit{dcterms:created}. Other vocabularies like the Provenance Vocabulary \cite{hartig_provenance_2009} or the Open Provenance Model (OPM) \cite{moreau_opm_2011} provide ways to publish detailed provenance information like the mentioned before. The W3C has recently created the PROV Data Model \cite{belhajjame_prov_2013}, a new vocabulary for provenance interchange on the Web. This PROV Data Model is based on OPM and describes the entities, activities and people involved in the creation of a piece of data, allowing the consumer to evaluate the reliability of the data based on the their provenance information. Furthermore, PROV was deliberately kept extensible, allowing various extended concepts and custom attributes to be used. For example, the Uncertainty Provenance (UP) \cite{de_nies_modeling_2013} set of attributes can be used to model the uncertainty of data, aggregated from heterogeneously divided trusted and untrusted sources, or with varying confidence.
+
+Here we can find an example of how bio2rdf.org -an atlas of post-genomic data and one of the biggest datasets in the LOD Cloud- represent the provenance data of its datasets, using some of the mentioned ontologies in conjunction with VoID, a dataset description vocabulary:
+
+\begin{lstlisting}
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://bio2rdf.org/bio2rdf_dataset:bio2rdf-affymetrix-20121002>
+    a void:Dataset ;
+    dcterms:created "2012-10-02"^^xsd:date ;
+    rdfs:label "affymetrix dataset by Bio2RDF on 2012-10-02" ;
+    dcterms:creator <affymetrix> ;
+    dcterms:publisher <http://bio2rdf.org> ;
+    void:dataDump <datadump> ;
+    prov:wasDerivedFrom
+        <http://bio2rdf.org/bio2rdf_dataset:affymetrix> ;
+    dcterms:rights "restricted-by-source-license" ,
+        "attribution" , "use-share-modify" ;
+    void:sparqlEndpoint <http://affymetrix.bio2rdf.org/sparql> .
+\end{lstlisting}
 
 In the process of publishing data from smart cities as Linked Data, new ontologies are going to be created to model the particularities of each city. The creators of these ontologies have to publish a suitable documentation, allowing the proper reuse of them. A tool for publishing ontologies and their documentation is Neologism\footnote{\url{http://neologism.deri.ie/}}. Neologism shows ontologies in a human-readable manner, representing class, subclass and property relationships through diagrams.
 
@@ -253,7 +279,7 @@ WHERE {
 
 Eventually, both batch and streaming results can be consumed through \textit{REST} services by web or mobile applications, or serve as input for more processing algorithms until they are finally presented to end-users.
 
-\subsection{Visualize}
+\subsection{Visualise}
 
 In order to make meaning from data, humans have developed a great ability to understand visual representations. The main objective of data visualisation is to communicate information in a clean and effective way through graphical means. It is also suggested that visualisation should also encourage users engagement and attention.
 
