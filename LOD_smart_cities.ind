@@ -1,0 +1,64 @@
+\begin{theindex}
+
+  \item {Big Data}, 12
+  \item {Data analysis}, 5, 8
+  \item {Data curation}, 17
+  \item {Data discovery}, 5, 10, 14
+  \item {Data integration}, 7
+  \item {Data life cicle}, 1, 5, 6, 8--10
+  \item {Data management}, 2, 6, 12, 14
+  \item {Data publication}, 21
+  \item {Data quality}, 13
+  \item {Data storage}, 19
+  \item {Linked Data}, 2, 4, 9, 17, 24
+    \subitem {Linked Open Data}, 1, 2, 4, 14
+  \item {Open Data}, 1, 4, 16
+  \item {Sensors}, 10
+  \item {Smart City}, 1, 2, 10, 12, 14
+  \item {Smart Data}, 2
+  \item {Social networks}, 10, 15
+
+  \indexspace
+
+  \item Ecoinformatics, 6
+
+  \indexspace
+
+  \item Metadata, 5
+
+  \indexspace
+
+  \item Ontology, 17, 18
+
+  \indexspace
+
+  \item Provenance, 9, 13, 17, 22
+
+  \indexspace
+
+  \item RDF, 4, 9, 14
+
+  \indexspace
+
+  \item Sensors, 15, 26
+  \item Smartphones, 2, 17
+  \item SPARQL, 4, 20, 26
+
+  \indexspace
+
+  \item Trust, 13
+
+  \indexspace
+
+  \item URI, 4
+
+  \indexspace
+
+  \item Visualisation, 11, 26
+
+  \indexspace
+
+  \item Web, 4
+    \subitem {Semantic Web}, 4
+
+\end{theindex}
